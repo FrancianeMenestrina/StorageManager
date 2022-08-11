@@ -1,4 +1,13 @@
+const express = require('express');
 const app = require('./app');
+
+app.use(express.json());
+const controllers = require('./controllers/produtctControllers');
+
+app.get('/products', controllers.allProducts);
+
+app.get('/products/:id', controllers.getProdutctsId);
+
 require('dotenv').config();
 
 // não altere esse arquivo, essa estrutura é necessária para à avaliação do projeto

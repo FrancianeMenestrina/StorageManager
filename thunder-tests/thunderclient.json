@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "cb7cccba-3126-43dc-bba3-3209eb401738",
+    "colId": "2b7269a9-b6f6-44e6-b0d8-36a9eff0a4b8",
+    "containerId": "",
+    "name": "StoreManager",
+    "url": "http://localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-11T22:48:20.380Z",
+    "modified": "2022-08-11T22:57:34.617Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
