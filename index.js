@@ -8,6 +8,8 @@ app.get('/products', controllers.allProducts);
 
 app.get('/products/:id', controllers.getProdutctsId);
 
+app.post('/products', controllers.createProduct);
+
 require('dotenv').config();
 
 // não altere esse arquivo, essa estrutura é necessária para à avaliação do projeto
