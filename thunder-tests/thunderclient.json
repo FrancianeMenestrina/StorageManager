@@ -4,13 +4,18 @@
     "colId": "2b7269a9-b6f6-44e6-b0d8-36a9eff0a4b8",
     "containerId": "",
     "name": "StoreManager",
-    "url": "http://localhost:3000/products/2",
-    "method": "GET",
+    "url": "http://localhost:3000/sales",
+    "method": "POST",
     "sortNum": 10000,
     "created": "2022-08-11T22:48:20.380Z",
-    "modified": "2022-08-12T04:40:49.012Z",
+    "modified": "2022-08-15T04:43:50.444Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  [\n    {\n      \"quantity\":8\n    }\n  ]",
+      "form": []
+    },
     "tests": []
   }
 ]
