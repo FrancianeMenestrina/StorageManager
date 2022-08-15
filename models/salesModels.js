@@ -3,13 +3,13 @@ const connection = require('./connection');
 const createSales = async (products) => {
   try {
     const sqlSale = `
-    INSERT INTO sales(date)
+    INSERT INTO StoreManager.sales(date)
     VALUES (now())`;
 
     const [result] = await connection.query(sqlSale);
 
     products.forEach(async (product) => {
-      const sqlSaleProducts = `INSERT INTO sales_products(product_id,sale_id,quantity)
+      const sqlSaleProducts = `INSERT INTO StoreManager.sales_products(product_id,sale_id,quantity)
       VALUES (?, ?, ?);`;
       await connection.query(sqlSaleProducts, [
         product.productId,
