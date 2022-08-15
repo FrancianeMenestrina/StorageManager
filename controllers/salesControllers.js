@@ -28,7 +28,7 @@ const isProductNotFound = async (products) => {
 
 const createSales = async (req, res) => {
   const products = req.body;
-
+  
   if (isInvalidEmptyId(products)) {
     return res.status(400).json({ message: '"productId" is required' });
   }
