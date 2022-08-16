@@ -2,20 +2,22 @@ const express = require('express');
 const app = require('./app');
 
 app.use(express.json());
-const controllers = require('./controllers/produtctControllers');
-const constrollersSales = require('./controllers/salesControllers');
+const controllersProducts = require('./controllers/produtctControllers');
+const controllersSales = require('./controllers/salesControllers');
 
-app.get('/products', controllers.allProducts);
+app.get('/products', controllersProducts.allProducts);
 
-app.get('/products/:id', controllers.getProdutctsId);
+app.get('/products/:id', controllersProducts.getProdutctsId);
 
-app.post('/products', controllers.createProduct);
+app.post('/products', controllersProducts.createProduct);
 
-app.post('/sales', constrollersSales.createSales);
+app.post('/sales', controllersSales.createSales);
 
-app.get('/sales', constrollersSales.allSales);
+app.get('/sales', controllersSales.allSales);
 
-app.get('/sales/:id', constrollersSales.getSalesId);
+app.get('/sales/:id', controllersSales.getSalesId);
+
+app.put('/products/:id', controllersProducts.updateProduct);
 
 require('dotenv').config();
 

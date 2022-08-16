@@ -16,14 +16,20 @@ const getProdutctsId = async (id) => {
   }
 };
 
+const updateProduct = async (id, name) => {
+  //  console.log('result 10models', name, id);
+  const sql = `UPDATE StoreManager.products SET
+   StoreManager.products.name = ? WHERE StoreManager.products.id = ?`;
+  const [result] = await connection.query(sql, [name, id]);
+  return result;
+};
+
 const createProduct = async ({ name }) => {
   const sql = `
   INSERT INTO StoreManager.products(name)
   VALUES (?)`;
 
   const [result] = await connection.query(sql, [name]);
-  // const sqlSelect = 'SELECT * FROM StoreManager.products WHERE id =?';
-  // const [[resultSelect]] = await connection.query(sqlSelect, [result.insertId]);
   return getProdutctsId(result.insertId);
 };
 
@@ -31,4 +37,5 @@ module.exports = {
   allProducts,
   getProdutctsId,
   createProduct,
+  updateProduct,
 };
