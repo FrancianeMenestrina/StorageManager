@@ -27,7 +27,7 @@ const createSales = async (products) => {
 const allSales = async () => {
   const sql = `SELECT sale_id AS saleId, date, product_id AS productId, quantity
   FROM StoreManager.sales_products
-  INNER JOIN sales ON StoreManager.sales_products.sale_id = StoreManager.sales.id
+  INNER JOIN StoreManager.sales ON StoreManager.sales_products.sale_id = StoreManager.sales.id
   ORDER BY StoreManager.sales_products.sale_id, StoreManager.sales_products.product_id;`;
   const [result] = await connection.query(sql);
   return result;
