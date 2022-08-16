@@ -34,7 +34,7 @@ const allSales = async () => {
 };
 
 const getSalesId = async (saleId) => {
-    const sql = `SELECT date, product_id AS productId, quantity
+    const sql = `SELECT sales.date, sales_products.product_id AS productId, sales_products.quantity
   FROM StoreManager.sales_products
   INNER JOIN StoreManager.sales 
   ON StoreManager.sales_products.sale_id = StoreManager.sales.id
