@@ -13,6 +13,10 @@ app.post('/products', controllers.createProduct);
 
 app.post('/sales', constrollersSales.createSales);
 
+app.get('/sales', constrollersSales.allSales);
+
+app.get('/sales/:id', constrollersSales.getSalesId);
+
 require('dotenv').config();
 
 // não altere esse arquivo, essa estrutura é necessária para à avaliação do projeto

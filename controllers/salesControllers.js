@@ -1,5 +1,6 @@
 const salesServices = require('../services/salesServices');
 const ProductsServices = require('../services/produtctServices');
+const SalesServices = require('../services/salesServices');
 
 const isInvalidEmptyId = (products) => {
   const invalidEmptyId = products.some((product) => !product.productId);
@@ -26,9 +27,26 @@ const isProductNotFound = async (products) => {
   return productNotFound;
 };
 
+const allSales = async (req, res) => {
+  const result = await SalesServices.allSales();
+  if (!result) return res.status(404).json({ message: 'Sale not found' });
+  return res.status(200).json(result);
+};
+
+const getSalesId = async (req, res) => {
+  const { id } = req.params;
+  console.log('saleId', id);
+  const result = await SalesServices.getSalesId(id);
+  console.log(result);
+  if (!result) {
+    return res.status(404).json({ message: 'Sale not found' });
+  }
+  return res.status(200).json(result);
+};
+
 const createSales = async (req, res) => {
   const products = req.body;
-  
+
   if (isInvalidEmptyId(products)) {
     return res.status(400).json({ message: '"productId" is required' });
   }
@@ -53,4 +71,6 @@ const createSales = async (req, res) => {
 
 module.exports = {
   createSales,
+  allSales,
+  getSalesId,
 };
