@@ -27,8 +27,8 @@ const createSales = async (products) => {
 const allSales = async () => {
   const sql = `SELECT sale_id AS saleId, date, product_id AS productId, quantity
   FROM StoreManager.sales_products
-  INNER JOIN sales ON sales_products.sale_id = sales.id
-  ORDER BY sales_products.sale_id, sales_products.product_id;`;
+  INNER JOIN sales ON StoreManager.sales_products.sale_id = StoreManager.sales.id
+  ORDER BY StoreManager.sales_products.sale_id, StoreManager.sales_products.product_id;`;
   const [result] = await connection.query(sql);
   return result;
 };
@@ -36,10 +36,10 @@ const allSales = async () => {
 const getSalesId = async (saleId) => {
     const sql = `SELECT date, product_id AS productId, quantity
   FROM StoreManager.sales_products
-  INNER JOIN sales 
-  ON sales_products.sale_id = sales.id
+  INNER JOIN StoreManager.sales 
+  ON StoreManager.sales_products.sale_id = StoreManager.sales.id
   WHERE id =?
-  ORDER BY sales_products.product_id`;
+  ORDER BY StoreManager.sales_products.product_id`;
     const [result] = await connection.query(sql, [saleId]);
   console.log('result modesl', result);
     return result;
