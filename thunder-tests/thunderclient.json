@@ -4,18 +4,13 @@
     "colId": "2b7269a9-b6f6-44e6-b0d8-36a9eff0a4b8",
     "containerId": "",
     "name": "StoreManager",
-    "url": "http://localhost:3000/products/1",
-    "method": "PUT",
+    "url": "http://localhost:3000/products/2",
+    "method": "DELETE",
     "sortNum": 10000,
     "created": "2022-08-11T22:48:20.380Z",
-    "modified": "2022-08-16T23:40:44.766Z",
+    "modified": "2022-08-17T05:02:40.965Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"name\": \"Antilopissimastericamente6\"\n}",
-      "form": []
-    },
     "tests": []
   }
 ]

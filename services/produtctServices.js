@@ -10,7 +10,13 @@ const getProdutctsId = async (id) => {
 
 const updateProduct = async (id, name) => {
   const result = await productsModels.updateProduct(id, name);
-  console.log('result 10', result);
+  // console.log('result 10', result);
+  if (!id) return false;
+  return result;
+};
+
+const deleteProduct = async (id) => {
+  const result = await productsModels.deleteProduct(id);
   if (!id) return false;
   return result;
 };
@@ -22,4 +28,5 @@ module.exports = {
   getProdutctsId,
   createProduct,
   updateProduct,
+  deleteProduct,
 };
