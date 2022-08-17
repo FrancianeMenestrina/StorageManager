@@ -42,7 +42,7 @@ const updateProduct = async (req, res) => {
 
   const result = await ProductsServices.updateProduct(id, name);
   const result3 = await ProductsServices.getProdutctsId(id);
-  console.log('result CONTROLER', result);
+  console.log(result);
   return res.status(200).json(result3);
 };
 
@@ -56,7 +56,7 @@ const deleteProduct = async (req, res) => {
 
   const result = await ProductsServices.deleteProduct(id);
   const result3 = await ProductsServices.getProdutctsId(id);
-  console.log('result CONTROLER', result);
+  console.log(result);
   return res.status(204).json(result3);
 };
 

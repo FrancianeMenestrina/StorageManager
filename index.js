@@ -21,6 +21,8 @@ app.put('/products/:id', controllersProducts.updateProduct);
 
 app.delete('/products/:id', controllersProducts.deleteProduct);
 
+app.delete('/sales/:id', controllersSales.deleteSale);
+
 require('dotenv').config();
 
 // não altere esse arquivo, essa estrutura é necessária para à avaliação do projeto

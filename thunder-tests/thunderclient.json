@@ -4,11 +4,11 @@
     "colId": "2b7269a9-b6f6-44e6-b0d8-36a9eff0a4b8",
     "containerId": "",
     "name": "StoreManager",
-    "url": "http://localhost:3000/products/2",
+    "url": "http://localhost:3000/sales/1",
     "method": "DELETE",
     "sortNum": 10000,
     "created": "2022-08-11T22:48:20.380Z",
-    "modified": "2022-08-17T05:02:40.965Z",
+    "modified": "2022-08-17T21:34:36.822Z",
     "headers": [],
     "params": [],
     "tests": []
