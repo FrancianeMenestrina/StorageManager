@@ -5,7 +5,7 @@ Os diversos endpoints permitem criar, ler, deletar e atualizar informações sob
 Conta com cobertura de testes unitários e validações das informações.
 
 
-<h2>Tecnologias utilizadas::</h2>
+<h2>Tecnologias utilizadas:</h2>
 
 - Node.js
 
